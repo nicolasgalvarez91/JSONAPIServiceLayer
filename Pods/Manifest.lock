@@ -9,15 +9,18 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.2.8):
     - PromiseKit/CorePromise
+  - SwiftHamcrest (2.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - PromiseKit (~> 6.0)
+  - SwiftHamcrest
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   PromiseKit: 6788ce1a0ed5448b83d4aaf56b9fc49fb7647d32
+  SwiftHamcrest: 4b5cd9a1294b461d217ff9f834b9b1cedd6b3e76
 
-PODFILE CHECKSUM: 464c954eaaadca0d55399d033cd5f1e681bcfe58
+PODFILE CHECKSUM: 57cb33deddade43acf3618ac8311ec3c432934ef
 
 COCOAPODS: 1.3.1

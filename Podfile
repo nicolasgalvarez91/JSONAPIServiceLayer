@@ -2,9 +2,12 @@
 platform :ios, '11.0'
 
 target 'PCHNetworkAPI' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
-  pod 'PromiseKit', '~> 6.0'  # Pods for PCHNetworkAPI
+  pod 'PromiseKit', '~> 6.0'
 
+  target 'PCHNetworkAPITests' do
+    inherit! :search_paths
+    pod 'SwiftHamcrest'
+  end
 end

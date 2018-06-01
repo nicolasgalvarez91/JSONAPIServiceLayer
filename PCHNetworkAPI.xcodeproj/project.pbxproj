@@ -14,6 +14,7 @@
 		4D3A426020C1A236007B3996 /* RequestCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A425F20C1A236007B3996 /* RequestCommand.swift */; };
 		4D3A426320C1A33D007B3996 /* RequestFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A426220C1A33D007B3996 /* RequestFetcher.swift */; };
 		4D3A426620C1B926007B3996 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A426520C1B926007B3996 /* User.swift */; };
+		4DCF5FAD20C1C98B00F745E6 /* RequestFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF5FAC20C1C98B00F745E6 /* RequestFetcherTests.swift */; };
 		8E48B5CCAC419B88E6D4C6E8 /* Pods_PCHNetworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1FD091B3F137D9CF8FAE25 /* Pods_PCHNetworkAPI.framework */; };
 		CE01174020BEFCA60019D18A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01173F20BEFCA60019D18A /* AppDelegate.swift */; };
 		CE01174220BEFCA60019D18A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01174120BEFCA60019D18A /* ViewController.swift */; };
@@ -24,7 +25,18 @@
 		CE01175A20BF06F20019D18A /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01175920BF06F20019D18A /* RequestManager.swift */; };
 		CE01175C20C04D980019D18A /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01175B20C04D980019D18A /* JSONDecoder+Extension.swift */; };
 		CE01175E20C0958B0019D18A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01175D20C0958B0019D18A /* Endpoint.swift */; };
+		E259F9366BB3EE6465920B7B /* Pods_PCHNetworkAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C8D8989352A93CB61F058F /* Pods_PCHNetworkAPITests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DCF5FA520C1C8C500F745E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE01173420BEFCA60019D18A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE01173B20BEFCA60019D18A;
+			remoteInfo = PCHNetworkAPI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D3A425320C19CE4007B3996 /* JSONEncoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONEncoder+Extension.swift"; sourceTree = "<group>"; };
@@ -34,9 +46,15 @@
 		4D3A425F20C1A236007B3996 /* RequestCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommand.swift; sourceTree = "<group>"; };
 		4D3A426220C1A33D007B3996 /* RequestFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFetcher.swift; sourceTree = "<group>"; };
 		4D3A426520C1B926007B3996 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4DCF5FA020C1C8C500F745E6 /* PCHNetworkAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCHNetworkAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DCF5FA420C1C8C500F745E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DCF5FAC20C1C98B00F745E6 /* RequestFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFetcherTests.swift; sourceTree = "<group>"; };
 		4F1FD091B3F137D9CF8FAE25 /* Pods_PCHNetworkAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCHNetworkAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		832FCF1E09AE67E0F769FD8E /* Pods-PCHNetworkAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCHNetworkAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCHNetworkAPI/Pods-PCHNetworkAPI.release.xcconfig"; sourceTree = "<group>"; };
+		902D0294E9B5172322BF5119 /* Pods-PCHNetworkAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCHNetworkAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCHNetworkAPITests/Pods-PCHNetworkAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9B9D39300F62166FD2F37DE2 /* Pods-PCHNetworkAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCHNetworkAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCHNetworkAPI/Pods-PCHNetworkAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		B109CC7275F6D6D3AAD17358 /* Pods-PCHNetworkAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCHNetworkAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCHNetworkAPITests/Pods-PCHNetworkAPITests.release.xcconfig"; sourceTree = "<group>"; };
+		C7C8D8989352A93CB61F058F /* Pods_PCHNetworkAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCHNetworkAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE01173C20BEFCA60019D18A /* PCHNetworkAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PCHNetworkAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE01173F20BEFCA60019D18A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE01174120BEFCA60019D18A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +69,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4DCF5F9D20C1C8C500F745E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E259F9366BB3EE6465920B7B /* Pods_PCHNetworkAPITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE01173920BEFCA60019D18A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,11 +153,38 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		4DCF5FA120C1C8C500F745E6 /* PCHNetworkAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				4DCF5FAA20C1C8F400F745E6 /* NetworkAPI */,
+				4DCF5FA420C1C8C500F745E6 /* Info.plist */,
+			);
+			path = PCHNetworkAPITests;
+			sourceTree = "<group>";
+		};
+		4DCF5FAA20C1C8F400F745E6 /* NetworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				4DCF5FAB20C1C90C00F745E6 /* Request Fetcher */,
+			);
+			path = NetworkAPI;
+			sourceTree = "<group>";
+		};
+		4DCF5FAB20C1C90C00F745E6 /* Request Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				4DCF5FAC20C1C98B00F745E6 /* RequestFetcherTests.swift */,
+			);
+			path = "Request Fetcher";
+			sourceTree = "<group>";
+		};
 		8E73336DE6BB30A381CC679B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				9B9D39300F62166FD2F37DE2 /* Pods-PCHNetworkAPI.debug.xcconfig */,
 				832FCF1E09AE67E0F769FD8E /* Pods-PCHNetworkAPI.release.xcconfig */,
+				902D0294E9B5172322BF5119 /* Pods-PCHNetworkAPITests.debug.xcconfig */,
+				B109CC7275F6D6D3AAD17358 /* Pods-PCHNetworkAPITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -140,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				4F1FD091B3F137D9CF8FAE25 /* Pods_PCHNetworkAPI.framework */,
+				C7C8D8989352A93CB61F058F /* Pods_PCHNetworkAPITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				CE01173E20BEFCA60019D18A /* PCHNetworkAPI */,
+				4DCF5FA120C1C8C500F745E6 /* PCHNetworkAPITests */,
 				CE01173D20BEFCA60019D18A /* Products */,
 				8E73336DE6BB30A381CC679B /* Pods */,
 				9C92B73BD84FC0B270C962A0 /* Frameworks */,
@@ -158,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				CE01173C20BEFCA60019D18A /* PCHNetworkAPI.app */,
+				4DCF5FA020C1C8C500F745E6 /* PCHNetworkAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +284,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4DCF5F9F20C1C8C500F745E6 /* PCHNetworkAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DCF5FA920C1C8C500F745E6 /* Build configuration list for PBXNativeTarget "PCHNetworkAPITests" */;
+			buildPhases = (
+				FBFB5C68927517EACD1E996E /* [CP] Check Pods Manifest.lock */,
+				4DCF5F9C20C1C8C500F745E6 /* Sources */,
+				4DCF5F9D20C1C8C500F745E6 /* Frameworks */,
+				4DCF5F9E20C1C8C500F745E6 /* Resources */,
+				6291B3B1F471653AF5847ED6 /* [CP] Embed Pods Frameworks */,
+				171439DD62AFBCF6CB1DF44C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DCF5FA620C1C8C500F745E6 /* PBXTargetDependency */,
+			);
+			name = PCHNetworkAPITests;
+			productName = PCHNetworkAPITests;
+			productReference = 4DCF5FA020C1C8C500F745E6 /* PCHNetworkAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CE01173B20BEFCA60019D18A /* PCHNetworkAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE01174E20BEFCAA0019D18A /* Build configuration list for PBXNativeTarget "PCHNetworkAPI" */;
@@ -259,6 +336,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = PCH;
 				TargetAttributes = {
+					4DCF5F9F20C1C8C500F745E6 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = CE01173B20BEFCA60019D18A;
+					};
 					CE01173B20BEFCA60019D18A = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
@@ -278,11 +359,19 @@
 			projectRoot = "";
 			targets = (
 				CE01173B20BEFCA60019D18A /* PCHNetworkAPI */,
+				4DCF5F9F20C1C8C500F745E6 /* PCHNetworkAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4DCF5F9E20C1C8C500F745E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE01173A20BEFCA60019D18A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -296,6 +385,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		171439DD62AFBCF6CB1DF44C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCHNetworkAPITests/Pods-PCHNetworkAPITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4D3A425020C19AE9007B3996 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +413,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		6291B3B1F471653AF5847ED6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PCHNetworkAPITests/Pods-PCHNetworkAPITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftHamcrest/Hamcrest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hamcrest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCHNetworkAPITests/Pods-PCHNetworkAPITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		6DF03F72101699BD6A816858 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -363,9 +485,35 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PCHNetworkAPI/Pods-PCHNetworkAPI-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FBFB5C68927517EACD1E996E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PCHNetworkAPITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4DCF5F9C20C1C8C500F745E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DCF5FAD20C1C98B00F745E6 /* RequestFetcherTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE01173820BEFCA60019D18A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +536,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4DCF5FA620C1C8C500F745E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE01173B20BEFCA60019D18A /* PCHNetworkAPI */;
+			targetProxy = 4DCF5FA520C1C8C500F745E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CE01174320BEFCA60019D18A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -408,6 +564,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4DCF5FA720C1C8C500F745E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 902D0294E9B5172322BF5119 /* Pods-PCHNetworkAPITests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PCHNetworkAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PCH.PCHNetworkAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PCHNetworkAPI.app/PCHNetworkAPI";
+			};
+			name = Debug;
+		};
+		4DCF5FA820C1C8C500F745E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B109CC7275F6D6D3AAD17358 /* Pods-PCHNetworkAPITests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PCHNetworkAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PCH.PCHNetworkAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PCHNetworkAPI.app/PCHNetworkAPI";
+			};
+			name = Release;
+		};
 		CE01174C20BEFCAA0019D18A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -563,6 +759,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4DCF5FA920C1C8C500F745E6 /* Build configuration list for PBXNativeTarget "PCHNetworkAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DCF5FA720C1C8C500F745E6 /* Debug */,
+				4DCF5FA820C1C8C500F745E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE01173720BEFCA60019D18A /* Build configuration list for PBXProject "PCHNetworkAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -11,7 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var promiseFetcher = PromiseFetcher()
+    var requestHandler: RequestHandeable = RequestHandler()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
                                   parameters: [:],
                                   headers: [:])
 
-        promiseFetcher.fetch(request: request, expectedModel: [User].self)
+        requestHandler.execute(request: request, expectedModel: [User].self)
             .done { users in
                 print(users)
             }.catch { error in
