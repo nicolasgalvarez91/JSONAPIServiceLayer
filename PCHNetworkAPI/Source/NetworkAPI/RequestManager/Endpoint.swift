@@ -15,10 +15,9 @@ protocol Endpoint {
 
 extension Endpoint {
     var baseUrl: String {
-        //TODO: move this base URL to plist
         return "http://pch.com/API/"
-        
     }
+
     func buildURL() -> String {
         return baseUrl + path
     }

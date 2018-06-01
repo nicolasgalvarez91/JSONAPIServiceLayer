@@ -9,6 +9,6 @@ import PromiseKit
 
 class NetworkAPI {
     init() {
-        
+
     }
 }
