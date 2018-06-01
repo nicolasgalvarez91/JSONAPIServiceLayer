@@ -11,6 +11,9 @@
 		4D3A425620C19D59007B3996 /* RequestExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A425520C19D59007B3996 /* RequestExecutor.swift */; };
 		4D3A425820C19E4C007B3996 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A425720C19E4C007B3996 /* ResponseParser.swift */; };
 		4D3A425B20C19E9F007B3996 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A425A20C19E9F007B3996 /* HttpRequest.swift */; };
+		4D3A426020C1A236007B3996 /* RequestCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A425F20C1A236007B3996 /* RequestCommand.swift */; };
+		4D3A426320C1A33D007B3996 /* RequestFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A426220C1A33D007B3996 /* RequestFetcher.swift */; };
+		4D3A426620C1B926007B3996 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A426520C1B926007B3996 /* User.swift */; };
 		8E48B5CCAC419B88E6D4C6E8 /* Pods_PCHNetworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1FD091B3F137D9CF8FAE25 /* Pods_PCHNetworkAPI.framework */; };
 		CE01174020BEFCA60019D18A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01173F20BEFCA60019D18A /* AppDelegate.swift */; };
 		CE01174220BEFCA60019D18A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01174120BEFCA60019D18A /* ViewController.swift */; };
@@ -28,6 +31,9 @@
 		4D3A425520C19D59007B3996 /* RequestExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExecutor.swift; sourceTree = "<group>"; };
 		4D3A425720C19E4C007B3996 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		4D3A425A20C19E9F007B3996 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		4D3A425F20C1A236007B3996 /* RequestCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommand.swift; sourceTree = "<group>"; };
+		4D3A426220C1A33D007B3996 /* RequestFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFetcher.swift; sourceTree = "<group>"; };
+		4D3A426520C1B926007B3996 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4F1FD091B3F137D9CF8FAE25 /* Pods_PCHNetworkAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PCHNetworkAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		832FCF1E09AE67E0F769FD8E /* Pods-PCHNetworkAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCHNetworkAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-PCHNetworkAPI/Pods-PCHNetworkAPI.release.xcconfig"; sourceTree = "<group>"; };
 		9B9D39300F62166FD2F37DE2 /* Pods-PCHNetworkAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PCHNetworkAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PCHNetworkAPI/Pods-PCHNetworkAPI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +95,38 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		4D3A425D20C1A1F9007B3996 /* Executor */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A425520C19D59007B3996 /* RequestExecutor.swift */,
+			);
+			path = Executor;
+			sourceTree = "<group>";
+		};
+		4D3A425E20C1A21B007B3996 /* RequestCommand */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A425F20C1A236007B3996 /* RequestCommand.swift */,
+			);
+			path = RequestCommand;
+			sourceTree = "<group>";
+		};
+		4D3A426120C1A32A007B3996 /* Request Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A426220C1A33D007B3996 /* RequestFetcher.swift */,
+			);
+			path = "Request Fetcher";
+			sourceTree = "<group>";
+		};
+		4D3A426420C1B91B007B3996 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A426520C1B926007B3996 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		8E73336DE6BB30A381CC679B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,11 +175,11 @@
 		CE01175120BEFCC80019D18A /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4D3A426420C1B91B007B3996 /* Model */,
 				4D3A425120C19CCF007B3996 /* Extensions */,
 				CE01175420BEFCF50019D18A /* NetworkAPI */,
 				CE01175320BEFCE50019D18A /* ViewController */,
 				CE01173F20BEFCA60019D18A /* AppDelegate.swift */,
-				CE01174120BEFCA60019D18A /* ViewController.swift */,
 				CE01174320BEFCA60019D18A /* Main.storyboard */,
 				CE01174620BEFCAA0019D18A /* Assets.xcassets */,
 				CE01174820BEFCAA0019D18A /* LaunchScreen.storyboard */,
@@ -159,6 +197,7 @@
 		CE01175320BEFCE50019D18A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE01174120BEFCA60019D18A /* ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -175,11 +214,13 @@
 		CE01175820BF06E10019D18A /* RequestManager */ = {
 			isa = PBXGroup;
 			children = (
-				4D3A425C20C19EC5007B3996 /* Response */,
+				4D3A426120C1A32A007B3996 /* Request Fetcher */,
+				4D3A425E20C1A21B007B3996 /* RequestCommand */,
+				4D3A425D20C1A1F9007B3996 /* Executor */,
 				CE01175D20C0958B0019D18A /* Endpoint.swift */,
 				4D3A425920C19E90007B3996 /* Request */,
-				4D3A425520C19D59007B3996 /* RequestExecutor.swift */,
 				CE01175920BF06F20019D18A /* RequestManager.swift */,
+				4D3A425C20C19EC5007B3996 /* Response */,
 			);
 			path = RequestManager;
 			sourceTree = "<group>";
@@ -329,9 +370,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3A426620C1B926007B3996 /* User.swift in Sources */,
 				4D3A425620C19D59007B3996 /* RequestExecutor.swift in Sources */,
+				4D3A426320C1A33D007B3996 /* RequestFetcher.swift in Sources */,
 				4D3A425420C19CE4007B3996 /* JSONEncoder+Extension.swift in Sources */,
 				CE01174220BEFCA60019D18A /* ViewController.swift in Sources */,
+				4D3A426020C1A236007B3996 /* RequestCommand.swift in Sources */,
 				CE01174020BEFCA60019D18A /* AppDelegate.swift in Sources */,
 				4D3A425820C19E4C007B3996 /* ResponseParser.swift in Sources */,
 				CE01175620BF02E70019D18A /* NetworkAPI.swift in Sources */,

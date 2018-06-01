@@ -9,13 +9,14 @@
 import Foundation
 
 protocol Endpoint {
-    var baseUrl: String { get set }
-    var path: String { get set }
+    var baseUrl: String { get }
+
+    var path: String { get }
 }
 
 extension Endpoint {
     var baseUrl: String {
-        return "http://pch.com/API/"
+        return "https://jsonplaceholder.typicode.com"
     }
 
     func buildURL() -> String {

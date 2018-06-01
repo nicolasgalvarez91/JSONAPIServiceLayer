@@ -14,7 +14,7 @@ protocol RequestExecutable {
     func execute<T: Decodable>(request: HttpRequestable, with expectedType: T.Type) -> HttpResponsable
 }
 
-class AlamofireRequest: RequestExecutable {
+class AlamofireRequestExecutor: RequestExecutable {
     let responseHandler: ResponseParseable
 
     init(responseHandler: ResponseParseable = AlamofireResponseParser()) {
