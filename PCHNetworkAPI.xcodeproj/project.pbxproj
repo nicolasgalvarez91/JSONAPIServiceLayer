@@ -219,7 +219,6 @@
 		CE01173E20BEFCA60019D18A /* PCHNetworkAPI */ = {
 			isa = PBXGroup;
 			children = (
-				CE01175220BEFCD00019D18A /* Resource */,
 				CE01175120BEFCC80019D18A /* Source */,
 				CE01174B20BEFCAA0019D18A /* Info.plist */,
 			);
@@ -241,13 +240,6 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		CE01175220BEFCD00019D18A /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
 		CE01175320BEFCE50019D18A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,11 +259,11 @@
 		CE01175820BF06E10019D18A /* RequestManager */ = {
 			isa = PBXGroup;
 			children = (
+				CE01175D20C0958B0019D18A /* Endpoint.swift */,
+				4D3A425D20C1A1F9007B3996 /* Executor */,
+				4D3A425920C19E90007B3996 /* Request */,
 				4D3A426120C1A32A007B3996 /* Request Fetcher */,
 				4D3A425E20C1A21B007B3996 /* RequestCommand */,
-				4D3A425D20C1A1F9007B3996 /* Executor */,
-				CE01175D20C0958B0019D18A /* Endpoint.swift */,
-				4D3A425920C19E90007B3996 /* Request */,
 				CE01175920BF06F20019D18A /* RequestManager.swift */,
 				4D3A425C20C19EC5007B3996 /* Response */,
 			);
@@ -571,7 +563,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PCHNetworkAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PCH.PCHNetworkAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -587,7 +583,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PCHNetworkAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PCH.PCHNetworkAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -718,7 +718,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 684XXF3TWU;
 				INFOPLIST_FILE = PCHNetworkAPI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = PCH.PCHNetworkAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -734,7 +737,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 684XXF3TWU;
 				INFOPLIST_FILE = PCHNetworkAPI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = PCH.PCHNetworkAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

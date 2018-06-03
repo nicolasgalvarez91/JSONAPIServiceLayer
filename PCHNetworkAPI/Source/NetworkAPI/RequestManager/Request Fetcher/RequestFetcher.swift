@@ -8,6 +8,7 @@
 
 import Foundation
 import PromiseKit
+import ReactiveSwift
 
 enum Result<T, U> where U: Error {
     case success(T)
@@ -33,5 +34,43 @@ struct RequestHandler: RequestHandeable {
         }
 
         return promise
+    }
+}
+
+extension SignalProducer: HttpResponsable { }
+
+extension Signal: HttpResponsable { }
+
+protocol RequestHandable {
+
+    init(command: RequestCommandable)
+
+    func execute<Model: Decodable>(request: HttpRequestable, expectedModel: Model.Type) -> HttpResponsable
+}
+
+class ReactiveRequestHandler: RequestHandable {
+    private let requestCommand: RequestCommandable
+
+    required init(command: RequestCommandable = RequestCommand()) {
+        self.requestCommand = command
+    }
+
+    func execute<Model: Decodable>(request: HttpRequestable, expectedModel: Model.Type) -> HttpResponsable {
+        guard let signalProducer = requestCommand.execute(request: request, with: Model.self)
+        as? SignalProducer<Model, CustomError> else {
+            return SignalProducer<Model, CustomError>(error: CustomError.common)
+        }
+
+        return signalProducer
+    }
+
+    func execute<Output, Model: Decodable>(request: HttpRequestable, expectedModel: Model.Type) -> Output where Output: HttpResponsable {
+
+        guard let signalProducer = requestCommand.execute(request: request, with: Model.self)
+        as? Output else {
+            return SignalProducer<Model, CustomError>(error: CustomError.common) as! Output
+        }
+
+        return signalProducer
     }
 }
