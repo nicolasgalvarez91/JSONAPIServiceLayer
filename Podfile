@@ -5,6 +5,7 @@ target 'PCHNetworkAPI' do
   use_frameworks!
   pod 'Alamofire'
   pod 'PromiseKit', '~> 6.0'
+  pod 'ReactiveSwift'
 
   target 'PCHNetworkAPITests' do
     inherit! :search_paths
