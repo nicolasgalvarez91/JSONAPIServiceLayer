@@ -20,7 +20,9 @@ extension JSONLoader {
 
                 let serialized = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
 
-                guard let json = serialized as? [[String: Any]] else { return [[String: Any]]() }
+                guard let json = serialized as? [[String: Any]] else {
+                    return [[String: Any]]()
+                }
 
                 return json
             } catch {
@@ -32,4 +34,4 @@ extension JSONLoader {
     }
 }
 
-extension XCTestCase: JSONLoader {}
+extension XCTestCase: JSONLoader { }

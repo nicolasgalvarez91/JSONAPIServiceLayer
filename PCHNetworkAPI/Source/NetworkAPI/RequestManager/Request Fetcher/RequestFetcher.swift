@@ -17,21 +17,21 @@ enum Result<T, U> where U: Error {
 protocol RequestHandeable {
     init(command: RequestCommandable)
 
-    func execute<Model: Decodable>(request: HttpRequestable, expectedModel: Model.Type) -> Promise<Model>
+    func execute<Output: HttpResponsable, Model: Decodable>(request: HttpRequestable, expectedModel: Model.Type)
+    throws -> Output
 }
 
-struct RequestHandler: RequestHandeable {
+struct PromiseRequestHandler: RequestHandeable {
     let requestCommand: RequestCommandable
 
     init(command: RequestCommandable = RequestCommand()) {
         self.requestCommand = command
     }
 
-    func execute<Model: Decodable>(request: HttpRequestable, expectedModel: Model.Type) -> Promise<Model> {
-        guard let promise = requestCommand.execute(request: request, with: Model.self) as? Promise<Model> else {
-            return Promise { seal in
-                seal.reject(CustomError.parsingError)
-            }
+    func execute<Output: HttpResponsable, Model: Decodable>(request: HttpRequestable, expectedModel: Model.Type)
+    throws -> Output {
+        guard let promise = requestCommand.execute(request: request, with: Model.self) as? Output else {
+            throw CustomError.parsingError
         }
 
         return promise

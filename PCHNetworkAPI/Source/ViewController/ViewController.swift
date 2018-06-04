@@ -20,24 +20,28 @@ class ViewController: UIViewController, NetworkContainerResolver {
 
         build()
         inject()
-        fetchStuff()
+        fetchPromiseStuff()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    func fetchStuff() {
+    func fetchPromiseStuff() {
         let request = HTTPRequest(endpoint: UserEndpoint.fetch,
                                   httpMethod: .get,
                                   parameters: [:],
                                   headers: [:])
+        do {
+            let promise: Promise<[User]> = try requestHandler.execute(request: request, expectedModel: [User].self)
 
-        requestHandler.execute(request: request, expectedModel: [User].self)
-            .done { users in
+            promise.done { users in
                 print(users)
             }.catch { error in
                 print(error)
+            }
+        } catch {
+            // Handle custom error
         }
     }
 
@@ -82,7 +86,7 @@ extension NetworkContainerResolver {
         }
 
         container.register(RequestHandeable.self) { r in
-            RequestHandler(command: r.resolve(RequestCommandable.self)!)
+            PromiseRequestHandler(command: r.resolve(RequestCommandable.self)!)
         }
     }
 }
