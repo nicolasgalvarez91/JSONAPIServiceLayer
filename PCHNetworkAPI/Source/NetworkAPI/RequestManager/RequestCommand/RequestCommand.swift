@@ -9,13 +9,15 @@
 import Foundation
 
 protocol RequestCommandable {
+    init(executor: RequestExecutable)
+
     func execute<T: Decodable>(request: HttpRequestable, with expectedType: T.Type) -> HttpResponsable
 }
 
 class RequestCommand: RequestCommandable {
     let executor: RequestExecutable
 
-    init(executor: RequestExecutable = AlamofireRequestExecutor()) {
+    required init(executor: RequestExecutable = AlamofireRequestExecutor()) {
         self.executor = executor
     }
 

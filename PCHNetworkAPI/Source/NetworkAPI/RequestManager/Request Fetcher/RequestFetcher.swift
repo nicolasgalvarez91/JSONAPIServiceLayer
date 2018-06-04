@@ -15,6 +15,8 @@ enum Result<T, U> where U: Error {
 }
 
 protocol RequestHandeable {
+    init(command: RequestCommandable)
+
     func execute<Model: Decodable>(request: HttpRequestable, expectedModel: Model.Type) -> Promise<Model>
 }
 

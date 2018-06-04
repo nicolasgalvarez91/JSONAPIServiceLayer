@@ -13,7 +13,9 @@
 		4D3A425B20C19E9F007B3996 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A425A20C19E9F007B3996 /* HttpRequest.swift */; };
 		4D3A426020C1A236007B3996 /* RequestCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A425F20C1A236007B3996 /* RequestCommand.swift */; };
 		4D3A426320C1A33D007B3996 /* RequestFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A426220C1A33D007B3996 /* RequestFetcher.swift */; };
-		4D3A426620C1B926007B3996 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A426520C1B926007B3996 /* User.swift */; };
+		4DCB39C220C564FB00A6D3C2 /* XCTestCase+JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB39C120C564FB00A6D3C2 /* XCTestCase+JSONLoader.swift */; };
+		4DCB39C520C5650700A6D3C2 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DCB39C420C5650700A6D3C2 /* Users.json */; };
+		4DCB39CA20C5681E00A6D3C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB39C920C5681E00A6D3C2 /* User.swift */; };
 		4DCF5FAD20C1C98B00F745E6 /* RequestFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF5FAC20C1C98B00F745E6 /* RequestFetcherTests.swift */; };
 		8E48B5CCAC419B88E6D4C6E8 /* Pods_PCHNetworkAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1FD091B3F137D9CF8FAE25 /* Pods_PCHNetworkAPI.framework */; };
 		CE01174020BEFCA60019D18A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01173F20BEFCA60019D18A /* AppDelegate.swift */; };
@@ -44,7 +46,9 @@
 		4D3A425A20C19E9F007B3996 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		4D3A425F20C1A236007B3996 /* RequestCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCommand.swift; sourceTree = "<group>"; };
 		4D3A426220C1A33D007B3996 /* RequestFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFetcher.swift; sourceTree = "<group>"; };
-		4D3A426520C1B926007B3996 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4DCB39C120C564FB00A6D3C2 /* XCTestCase+JSONLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+JSONLoader.swift"; sourceTree = "<group>"; };
+		4DCB39C420C5650700A6D3C2 /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		4DCB39C920C5681E00A6D3C2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4DCF5FA020C1C8C500F745E6 /* PCHNetworkAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCHNetworkAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DCF5FA420C1C8C500F745E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DCF5FAC20C1C98B00F745E6 /* RequestFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFetcherTests.swift; sourceTree = "<group>"; };
@@ -143,12 +147,28 @@
 			path = "Request Fetcher";
 			sourceTree = "<group>";
 		};
-		4D3A426420C1B91B007B3996 /* Model */ = {
+		4DCB39C020C564FB00A6D3C2 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4D3A426520C1B926007B3996 /* User.swift */,
+				4DCB39C120C564FB00A6D3C2 /* XCTestCase+JSONLoader.swift */,
 			);
-			path = Model;
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4DCB39C320C5650700A6D3C2 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				4DCB39C420C5650700A6D3C2 /* Users.json */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		4DCB39C820C5681E00A6D3C2 /* Domain Model */ = {
+			isa = PBXGroup;
+			children = (
+				4DCB39C920C5681E00A6D3C2 /* User.swift */,
+			);
+			path = "Domain Model";
 			sourceTree = "<group>";
 		};
 		4DCF5FA120C1C8C500F745E6 /* PCHNetworkAPITests */ = {
@@ -163,6 +183,8 @@
 		4DCF5FAA20C1C8F400F745E6 /* NetworkAPI */ = {
 			isa = PBXGroup;
 			children = (
+				4DCB39C320C5650700A6D3C2 /* TestData */,
+				4DCB39C020C564FB00A6D3C2 /* Helper */,
 				4DCF5FAB20C1C90C00F745E6 /* Request Fetcher */,
 			);
 			path = NetworkAPI;
@@ -229,7 +251,7 @@
 		CE01175120BEFCC80019D18A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4D3A426420C1B91B007B3996 /* Model */,
+				4DCB39C820C5681E00A6D3C2 /* Domain Model */,
 				4D3A425120C19CCF007B3996 /* Extensions */,
 				CE01175420BEFCF50019D18A /* NetworkAPI */,
 				CE01175320BEFCE50019D18A /* ViewController */,
@@ -366,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCB39C520C5650700A6D3C2 /* Users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,11 +461,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PCHNetworkAPI/Pods-PCHNetworkAPI-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -508,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DCF5FAD20C1C98B00F745E6 /* RequestFetcherTests.swift in Sources */,
+				4DCB39C220C564FB00A6D3C2 /* XCTestCase+JSONLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +543,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D3A426620C1B926007B3996 /* User.swift in Sources */,
 				4D3A425620C19D59007B3996 /* RequestExecutor.swift in Sources */,
 				4D3A426320C1A33D007B3996 /* RequestFetcher.swift in Sources */,
 				4D3A425420C19CE4007B3996 /* JSONEncoder+Extension.swift in Sources */,
@@ -524,6 +551,7 @@
 				CE01174020BEFCA60019D18A /* AppDelegate.swift in Sources */,
 				4D3A425820C19E4C007B3996 /* ResponseParser.swift in Sources */,
 				CE01175C20C04D980019D18A /* JSONDecoder+Extension.swift in Sources */,
+				4DCB39CA20C5681E00A6D3C2 /* User.swift in Sources */,
 				4D3A425B20C19E9F007B3996 /* HttpRequest.swift in Sources */,
 				CE01175E20C0958B0019D18A /* Endpoint.swift in Sources */,
 				CE01175A20BF06F20019D18A /* RequestManager.swift in Sources */,

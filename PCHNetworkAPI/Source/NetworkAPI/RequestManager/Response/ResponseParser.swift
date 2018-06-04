@@ -20,6 +20,8 @@ extension DataResponse: JsonResponse { }
 
 protocol ResponseParseable {
 
+    init(decoder: JSONDecoder)
+
     var decoder: JSONDecoder { get set }
 
     func handleResponse<T: Decodable>(response: JsonResponse, expectedType: T.Type) throws -> T
@@ -28,7 +30,7 @@ protocol ResponseParseable {
 class AlamofireResponseParser: ResponseParseable {
     var decoder: JSONDecoder
 
-    init(decoder: JSONDecoder = JSONDecoder()) {
+    required init(decoder: JSONDecoder = JSONDecoder()) {
         self.decoder = decoder
         self.decoder.keyDecodingStrategy = .convertFromSnakeCase
     }

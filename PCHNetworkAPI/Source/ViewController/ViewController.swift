@@ -7,15 +7,19 @@
 //
 
 import PromiseKit
+import Swinject
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NetworkContainerResolver {
 
-    var requestHandler: RequestHandeable = RequestHandler()
+    var container: Container! = Container()
+    var requestHandler: RequestHandeable!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        build()
+        inject()
         fetchStuff()
     }
 
@@ -36,6 +40,10 @@ class ViewController: UIViewController {
                 print(error)
         }
     }
+
+    func inject() {
+        self.requestHandler = container.resolve(RequestHandeable.self)
+    }
 }
 
 enum UserEndpoint: Endpoint {
@@ -45,6 +53,36 @@ enum UserEndpoint: Endpoint {
         switch self {
         case .fetch:
             return "/users"
+        }
+    }
+}
+
+protocol NetworkContainerResolver {
+    var container: Container! { get set }
+
+    var requestHandler: RequestHandeable! { get set }
+
+    func build()
+
+    func inject()
+}
+
+extension NetworkContainerResolver {
+    func build() {
+        container.register(ResponseParseable.self) { _ in
+            AlamofireResponseParser()
+        }
+
+        container.register(RequestExecutable.self) { r in
+            AlamofireRequestExecutor(responseHandler: r.resolve(ResponseParseable.self)!)
+        }
+
+        container.register(RequestCommandable.self) { r in
+            RequestCommand(executor: r.resolve(RequestExecutable.self)!)
+        }
+
+        container.register(RequestHandeable.self) { r in
+            RequestHandler(command: r.resolve(RequestCommandable.self)!)
         }
     }
 }

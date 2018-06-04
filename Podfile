@@ -5,8 +5,10 @@ target 'PCHNetworkAPI' do
   use_frameworks!
   pod 'Alamofire'
   pod 'PromiseKit', '~> 6.0'
+  pod 'Swinject'
+  pod 'SwinjectStoryboard'
 
-  target 'PCHNetworkAPITests' do
+target 'PCHNetworkAPITests' do
     inherit! :search_paths
     pod 'SwiftHamcrest'
   end

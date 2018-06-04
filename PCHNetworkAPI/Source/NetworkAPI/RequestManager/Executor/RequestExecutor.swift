@@ -38,9 +38,7 @@ class AlamofireRequestExecutor: RequestExecutable {
                         NSLog(error.localizedDescription)
                         seal.reject(error)
                     }
-
             }
         }
-
     }
 }
