@@ -1,25 +1,27 @@
 # JSONAPIServiceLayer
 
-### Layer components:
+### Layer components
 
-## HttpRequestable:
+## HttpRequestable
   Here we define a set of blueprints properties for everything a request needs to be executed.
-  - Endpoint:
-  - HttpMethod:
-  - Parameters: 
-  - Header: 
-  - Encoding:
+  - Endpoint: We defined that an Endpoint should have 2 parts. 
+    First the **base** part that is a little self explanatory, but here is where the base URL should be stored. As it should be declared just once, we created a protocol extension and declared the computed property value. 
+    And the **path** should represent the URI identifier, and should be declared at every Endpoint concrete implementation. Take in consideration that it would be better to create enums and make them to implement the Endpoint protocol.
+  - HttpMethod: this will respond to every HTTP action. 
+  - Parameters: Self explanatory.
+  - Header: The header necessary to be send on a HTTP request.
+  - Encoding: The encoding may not change, but just in case we need another one, we define an encoding variable.
 
-## ResponseParseable:
+## ResponseParseable
   Here we define a blueprint init, in order to initialize its concrete implementation with the needed dependency, and a blueprint method to handle the server response.
 
-## RequestCommandable:
+## RequestCommandable
   Here we define a protocol to connect the RequestHandeable and RequestExecutable.
 
-## RequestExecutable:
+## RequestExecutable
   Here we define a blueprint init, in order to initialize its concrete implementation with the needed dependency, and a blueprint method that will send a request to the server and communicate with the ResponseParseable whenever the server responds to the executed request.
     
-## RequestHandeable:
+## RequestHandeable
   Here we define a protocol with a blueprint init to indicate us we need to inject a RequestCommandable, and a blueprint method with two generics parameters: Output that will be our return type and that should be a concrete implementation of HttpResponsable; and Model that should be a concrete implementation of Decodable protocol.
 
 ### Request Executor / Protocols:
