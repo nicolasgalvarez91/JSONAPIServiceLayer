@@ -1,12 +1,34 @@
 # JSONAPIServiceLayer
 
+### Layer components:
+
+## HttpRequestable:
+  Here we define a set of blueprints properties for everything a request needs to be executed.
+  - Endpoint:
+  - HttpMethod:
+  - Parameters: 
+  - Header: 
+  - Encoding:
+
+## ResponseParseable:
+  Here we define a blueprint init, in order to initialize its concrete implementation with the needed dependency, and a blueprint method to handle the server response.
+
+## RequestCommandable:
+  Here we define a protocol to connect the RequestHandeable and RequestExecutable.
+
+## RequestExecutable:
+  Here we define a blueprint init, in order to initialize its concrete implementation with the needed dependency, and a blueprint method that will send a request to the server and communicate with the ResponseParseable whenever the server responds to the executed request.
+    
+## RequestHandeable:
+  Here we define a protocol with a blueprint init to indicate us we need to inject a RequestCommandable, and a blueprint method with two generics parameters: Output that will be our return type and that should be a concrete implementation of HttpResponsable; and Model that should be a concrete implementation of Decodable protocol.
+
 ### Request Executor / Protocols:
   - RequestExecutable: will be the top layer, this declare the function execute
   that will receive a HttpRequestable and the object's expected type, in return
   will give you an HttpResponsable, the exit point where you will
   recieve your expected object
 
-  - HttpRequestable: define the enpoint, http method, params and headers for
+  - HttpRequestable: define the endpoint, http method, params and headers for
   your request
 
   - HttpResponsable: define your return model when call an API service
@@ -16,7 +38,7 @@
   HttpResponsable, using a decoder (in our case JSONDecoder) will generate
   the expected model.
 
-### Integrations
+### 3rd Party Integrations
   - [Alamofire](https://github.com/Alamofire/Alamofire):
   we decided to integrate this pod to be our ResquestExecutable.
   It facilitate the generation of a HTTP request, a parsing it response to a
@@ -29,3 +51,7 @@
   better than using callbacks.  In order to avoid callback hell, we
   implemented this library.  You can easily separate what to execute if your
   previous task return an error or it was successful.  
+
+  - [Swinject](https://github.com/Swinject/Swinject)
+  This library will help us to achieve IoC(Inversion of Control) due to we develop our networking layer with Dependency Injection instead of a fat singleton with multiple responsabilities.
+  In order to inject a property, we must instantiate a Container, and register the base protocol with the associated concrete implementation.
