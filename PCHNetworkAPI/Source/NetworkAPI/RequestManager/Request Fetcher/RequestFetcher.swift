@@ -24,7 +24,7 @@ protocol RequestHandeable {
 struct PromiseRequestHandler: RequestHandeable {
     let requestCommand: RequestCommandable
 
-    init(command: RequestCommandable = RequestCommand()) {
+    init(command: RequestCommandable) {
         self.requestCommand = command
     }
 

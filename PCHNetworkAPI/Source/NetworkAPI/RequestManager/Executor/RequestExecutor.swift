@@ -17,7 +17,7 @@ protocol RequestExecutable {
 class AlamofireRequestExecutor: RequestExecutable {
     let responseHandler: ResponseParseable
 
-    init(responseHandler: ResponseParseable = AlamofireResponseParser()) {
+    init(responseHandler: ResponseParseable) {
         self.responseHandler = responseHandler
     }
 

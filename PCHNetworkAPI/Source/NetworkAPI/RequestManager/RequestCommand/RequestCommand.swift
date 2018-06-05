@@ -17,7 +17,7 @@ protocol RequestCommandable {
 class RequestCommand: RequestCommandable {
     let executor: RequestExecutable
 
-    required init(executor: RequestExecutable = AlamofireRequestExecutor()) {
+    required init(executor: RequestExecutable) {
         self.executor = executor
     }
 
