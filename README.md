@@ -7,6 +7,19 @@
   - Endpoint: We defined that an Endpoint should have 2 parts. 
     First the **base** part that is a little self explanatory, but here is where the base URL should be stored. As it should be declared just once, we created a protocol extension and declared the computed property value. 
     And the **path** should represent the URI identifier, and should be declared at every Endpoint concrete implementation. Take in consideration that it would be better to create enums and make them to implement the Endpoint protocol.
+
+
+    ```
+    protocol Endpoint {
+
+      var baseUrl: String { get }
+
+      var path: String { get }
+
+      func buildURL() -> String
+    }    
+    ```
+
   - HttpMethod: this will respond to every HTTP action. 
   - Parameters: Self explanatory.
   - Header: The header necessary to be send on a HTTP request.
@@ -15,11 +28,28 @@
 ## ResponseParseable
   Here we define a blueprint init, in order to initialize its concrete implementation with the needed dependency, and a blueprint method to handle the server response.
 
+  ```
+  protocol ResponseParseable {
+
+    init(decoder: JSONDecoder)
+
+    func handleResponse<T: Decodable>(response: JsonResponse, expectedType: T.Type) throws -> T
+  }
+  ```
+
+  We are implicity declaring that the concrete implementation of this protocol must have a JSON decoder.
+
+  Then the method handleResponse is composed by two parameters:
+  - Response: which should be an instance of JsonResponse.
+  - ExpectedType: a generic param that we impose it to conform Decodable.
+
 ## RequestCommandable
   Here we define a protocol to connect the RequestHandeable and RequestExecutable.
 
 ## RequestExecutable
   Here we define a blueprint init, in order to initialize its concrete implementation with the needed dependency, and a blueprint method that will send a request to the server and communicate with the ResponseParseable whenever the server responds to the executed request.
+
+  This protocol 
     
 ## RequestHandeable
   Here we define a protocol with a blueprint init to indicate us we need to inject a RequestCommandable, and a blueprint method with two generics parameters: Output that will be our return type and that should be a concrete implementation of HttpResponsable; and Model that should be a concrete implementation of Decodable protocol.

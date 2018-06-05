@@ -12,6 +12,8 @@ protocol Endpoint {
     var baseUrl: String { get }
 
     var path: String { get }
+
+    func buildURL() -> String
 }
 
 extension Endpoint {

@@ -22,13 +22,11 @@ protocol ResponseParseable {
 
     init(decoder: JSONDecoder)
 
-    var decoder: JSONDecoder { get set }
-
     func handleResponse<T: Decodable>(response: JsonResponse, expectedType: T.Type) throws -> T
 }
 
 class AlamofireResponseParser: ResponseParseable {
-    var decoder: JSONDecoder
+    let decoder: JSONDecoder
 
     required init(decoder: JSONDecoder = JSONDecoder()) {
         self.decoder = decoder
