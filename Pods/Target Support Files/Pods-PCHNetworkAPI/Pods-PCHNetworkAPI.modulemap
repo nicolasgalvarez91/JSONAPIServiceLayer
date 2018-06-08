@@ -1,6 +1,0 @@
-framework module Pods_PCHNetworkAPI {
-  umbrella header "Pods-PCHNetworkAPI-umbrella.h"
-
-  export *
-  module * { export * }
-}
