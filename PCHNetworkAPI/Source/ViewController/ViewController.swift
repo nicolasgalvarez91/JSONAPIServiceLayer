@@ -28,10 +28,11 @@ class ViewController: UIViewController, NetworkContainerResolver {
     }
 
     func fetchPromiseStuff() {
-        let request = HTTPRequest(endpoint: UserEndpoint.fetch,
-                                  httpMethod: .get,
-                                  parameters: [:],
-                                  headers: [:])
+        let request = RequestBuilder()
+            .consume(endpoint: UserEndpoint.fetch)
+            .withMethod(.get)
+            .build()
+        
         do {
             let promise: Promise<[User]> = try requestHandler.execute(request: request, expectedModel: [User].self)
 
